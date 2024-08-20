@@ -65,6 +65,10 @@ header{
     position: fixed;
     padding: 1.5rem 0;
     z-index: 100;
+    transition: all 0.5s ease-in-out;
+}
+header.sticky{
+    background: #000;
 }
 .logo img{
     display: block;
@@ -202,7 +206,7 @@ header{
 .imgs img{
     display: block;   
     object-fit: cover;
-    /*width: 50%;*/
+    width: 50%;
 }
 
 .content_for_img{
@@ -334,9 +338,13 @@ header{
     color: var(--primary_color);
     font-weight: 600;
 }
+.cards img{
+    width: 70%;
+    height: 20%;
+}
 
 
-/*restraunt menu*/
+/*restaurant menu*/
 #food_lover{
     padding: 10rem 0;
     background: #f4f4f4;
@@ -401,7 +409,7 @@ header{
 /*Customer feedback*/
 #customer_feedback{
     padding: 10rem 0;
-    background: url('../images/01 copy.jpeg') no-repeat center center/cover;
+    background: url('../images/pexels-cottonbro-3297882 copy.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     position: relative;
    
@@ -449,7 +457,7 @@ header{
 
 /*upcoming*/
 #up_coming_events{
-    background:url("../images/main_image copy.jpg");
+   /* background:url("../images/chef image copy.jpg") ;*/
     padding: 10rem 0;
 }
 .events_cards_container{
@@ -476,5 +484,58 @@ header{
 .event_content a{
     text-transform: uppercase;
     font-size: 1.3rem;
+    color: var(--primary_color);
+}
+
+
+/*Footer section*/
+#footer{
+    background: #212121;
+    padding: 4rem 0;
+    color: var(--white_color);
+    font-size:1.3rem ;
+}
+.footer_container{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:2rem;
+
+}
+.about_us img{
+    display: block;
+    object-fit: cover;
+    width: 30%;
+}
+.about_us p{
+    line-height: 1.8;
+    padding-bottom: 2rem;
+}
+.about_us a{
+    color: var(--primary_color);
+}
+.footer_container h2{
+    padding-bottom: 3rem;
+    color: var(--primary_color);
+}
+.opening_hours{
+    line-height: 1.8;
+
+}
+.opening_hours .day, .add, .email{
+    color: var(--primary_color);
+}
+.opening_hours .day span{
+    color: var(--white_color);
+}
+
+/*copyright*/
+footer{
+    background: #171717;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    color: var(--white_color);
+}
+footer a{
     color: var(--primary_color);
 }

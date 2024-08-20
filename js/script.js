@@ -55,9 +55,9 @@ closeBtn.addEventListener("click",function(){
   //Dynamic images
 
   const SectionCenter=document.querySelector('.menus_items_container');
-  const filterBtns=document.querySelectorAll('.btn-cat');
+  const filterBtn=document.querySelectorAll('.btn-cat');
   
-  filterBtns.forEach(function(btn){
+  filterBtn.forEach(function(btn){
     btn.addEventListener("click",function(e){
         const Category=e.currentTarget.dataset.id;
         const menuCategory=menu.filter(function(menuItem){
@@ -75,67 +75,67 @@ closeBtn.addEventListener("click",function(){
   });
   const menu =[
     {
-        id:1,
+        id: 1,
         title:"Daal chawal",
         Category:"Dinner",
         price: 25,
-        img: "./images/01 copy.jpeg"
+        images: ""
     },
     {
         id:2,
         title:"Daal chawal",
         Category:"Lunch",
         price:25,
-        img:"./images/01 copy.jpeg"
+        images:"./images/01 copy.jpeg"
     },
     {
         id:3,
         title:"Daal chawal",
         Category:"Drinks",
         price:25,
-        img:"./images/01 copy.jpeg"
+        images:"./images/01 copy.jpeg"
     },
     {
         id:4,
         title:"Daal chawal",
         Category:"Starter",
         price:25,
-        img:"./images/01 copy.jpg"
+        images:"./images/01 copy.jpg"
     },
     {
         id:5,
         title:"Daal chawal",
         Category:"Dinner",
         price:25,
-        img:"./images/01 copy.jpeg"
+        images:"./images/01 copy.jpeg"
     },
     {
         id:6,
         title:"Daal chawal",
         Category:"Lunch",
         price:25,
-        img:"./images/01 copy.jpeg"
+        images:"./images/01 copy.jpeg"
     },
     {
         id:7,
         title:"Daal chawal",
         Category:"Drinks",
         price:25,
-        img:"./images/01 copy.jpeg"
+        images:"./images/01 copy.jpeg"
     },
     {
         id:8,
         title:"Daal chawal",
         Category:"Starter",
         price:25,
-        img:"./images/01 copy.jpeg"
+        images:"./images/01 copy.jpeg"
     },
     {
         id:9,
         title:"Daal chawal",
         Category:"Dinner",
         price:25,
-        images:"./images/01 copy.jpeg"
+        images:"./images/"
     },
 
   ]
@@ -146,13 +146,33 @@ closeBtn.addEventListener("click",function(){
   function displayMenusItem(menuItem){
     let displayMenusItem=menuItem.map(function(item){
         return`<div class="img_cards">
-        <img src=${item.img} alt=""/>
+        <img src=${item.images} alt=" "/>
         <p class="price" >Only on ${item.price} dollars</p>
         <p>${item.title}</p>
-    </div>`
+    </div>`;
     })
-        displayMenusItem=displayMenusItem.join(" ");
+        displayMenusItem=displayMenusItem.join("");
         SectionCenter.innerHTML=displayMenusItem;
 
     
   }
+
+
+  //sticky
+
+  const nav=document.querySelector("header");
+  window.addEventListener("scroll",function(){
+    if(this.document.documentElement.scrollTop>20){
+        nav.classList.add("sticky");
+    }
+    else{
+        nav.classList.remove("sticky");
+    }
+  })
+
+  //parallax effect
+  const Parallax=document.querySelector("#showcase");
+  window.addEventListener("scroll",function(){
+    let offset=this.window.pageYOffset;
+    Parallax.style.backgroundPositionY=offset*0.7+"px";
+  });

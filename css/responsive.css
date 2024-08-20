@@ -81,24 +81,13 @@
     .btn-cat{
         margin: 1rem 1rem;
     }
-    .counters{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .footer_container{
-        
-        grid-template-columns: repeat(2,1fr);
-    }
+    
+   
 }
 
 @media(max-width:520px){
     .menus_items_container{
         grid-template-columns: repeat(1,1fr);
     }
-    .counters{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .footer_container{
-        
-        grid-template-columns: repeat(1,1fr);
-    }
+   
 }
