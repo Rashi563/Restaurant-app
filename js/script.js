@@ -10,21 +10,7 @@ closeBtn.addEventListener("click",function(){
     menus.classList.remove("active");
 })
 
-/*var swiper = new swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween:30,
-    slidesPerGroup: 1,
-    loop:true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },*/
-    var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 30,
         slidesPerGroup: 1,
@@ -76,66 +62,66 @@ closeBtn.addEventListener("click",function(){
   const menu =[
     {
         id: 1,
-        title:"Daal chawal",
+        title:"Chole Chawal",
         Category:"Dinner",
-        price: 25,
-        images: ""
+        price: 125,
+        images: "./images/pexels-ali-dashti-506667798-25856539 copy.jpg"
     },
     {
         id:2,
-        title:"Daal chawal",
+        title:"Beetroot Salad",
         Category:"Lunch",
-        price:25,
-        images:"./images/01 copy.jpeg"
+        price:150,
+        images:"./images/pexels-peps-silvestro-180443212-18229213 copy.jpg"
     },
     {
         id:3,
-        title:"Daal chawal",
+        title:"Mango Juice",
         Category:"Drinks",
-        price:25,
-        images:"./images/01 copy.jpeg"
+        price:90,
+        images:"./images/pexels-rajdeepcraft-17119248-6416553 copy.jpg"
     },
     {
         id:4,
-        title:"Daal chawal",
+        title:"Cheescake",
         Category:"Starter",
-        price:25,
-        images:"./images/01 copy.jpg"
+        price:250,
+        images:"./images/pexels-cescrz-3185509 copy.jpg"
     },
     {
         id:5,
-        title:"Daal chawal",
+        title:"Veg Biryani",
         Category:"Dinner",
-        price:25,
-        images:"./images/01 copy.jpeg"
+        price:220,
+        images:"./images/pexels-ali-dashti-506667798-24206918 copy.jpg"
     },
     {
         id:6,
-        title:"Daal chawal",
+        title:"Burger and Fries",
         Category:"Lunch",
-        price:25,
-        images:"./images/01 copy.jpeg"
+        price:300,
+        images:"./images/pexels-the-castlebar-3902897-9201333 copy.jpg"
     },
     {
         id:7,
-        title:"Daal chawal",
+        title:"Blueberry Juice",
         Category:"Drinks",
-        price:25,
-        images:"./images/01 copy.jpeg"
+        price:120,
+        images:"./images/pexels-cookeat-6671856 copy.jpg"
     },
     {
         id:8,
-        title:"Daal chawal",
+        title:"Samosa",
         Category:"Starter",
-        price:25,
-        images:"./images/01 copy.jpeg"
+        price:50,
+        images:"./images/pexels-karthikeyan-anand-271239097-14477873 (1) copy.jpg"
     },
     {
         id:9,
-        title:"Daal chawal",
+        title:"Veg Platter",
         Category:"Dinner",
-        price:25,
-        images:"./images/"
+        price:450,
+        images:"./images/pexels-ali-dashti-506667798-21856002 copy.jpg"
     },
 
   ]
@@ -146,8 +132,8 @@ closeBtn.addEventListener("click",function(){
   function displayMenusItem(menuItem){
     let displayMenusItem=menuItem.map(function(item){
         return`<div class="img_cards">
-        <img src=${item.images} alt=" "/>
-        <p class="price" >Only on ${item.price} dollars</p>
+        <img src="${item.images}" alt=""/>
+        <p class="price" >Only for ${item.price} rupees</p>
         <p>${item.title}</p>
     </div>`;
     })

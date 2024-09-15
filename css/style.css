@@ -317,7 +317,7 @@ header.sticky{
 
 /*deal*/
 #deal_today{
-    padding: 10rem 0 ;
+    padding: 10rem 10rem ;
    /*background: url() no-repeat;*/
 }
 #deal_today.card_content{
@@ -339,7 +339,7 @@ header.sticky{
     font-weight: 600;
 }
 .cards img{
-    width: 70%;
+    width: 100%;
     height: 20%;
 }
 
@@ -448,8 +448,8 @@ header.sticky{
     padding: 2rem 0;
 
 }
-.customer_card name{
-    text-align: center;
+.name{
+    align-items: center;
     font-size: 1.5rem;
     color: var(--primary_color);
 }
